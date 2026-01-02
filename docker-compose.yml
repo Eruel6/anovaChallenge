@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data:ro
+    environment:
+      - TITULOS_PATH=/app/data/_files_xlsm_2025_December_RUN_Bancário_e_Tít._Públicos_-_Taxas_Indicativas_AAI_30122025_1767102722876.xlsm
