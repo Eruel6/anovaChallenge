@@ -7,3 +7,20 @@ services:
       - ./data:/app/data:ro
     environment:
       - TITULOS_PATH=/app/data/_files_xlsm_2025_December_RUN_Bancário_e_Tít._Públicos_-_Taxas_Indicativas_AAI_30122025_1767102722876.xlsm
+
+  web-dev:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+      - web_node_modules:/app/node_modules
+    environment:
+      - VITE_PROXY_TARGET=http://api:8000
+    ports:
+      - "5173:5173"
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 5173"
+    depends_on:
+      - api
+
+volumes:
+  web_node_modules:

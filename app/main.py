@@ -3,6 +3,10 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
+from pathlib import Path
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
 from app.api.routers import clients, health, titles
 from app.services.loader import DataFileError, load_titulos
 from app.stores.stores import AlocacoesStore, ClientesStore, TitulosStore
