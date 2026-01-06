@@ -109,7 +109,8 @@ export default function Home() {
             <p className="text-muted">
               Abra a documentação interativa para testar endpoints e ver os schemas da API.
             </p>
-            <a className="btn btn-sm btn-outline-secondary" href="/docs" target="_blank" rel="noreferrer">
+            <a 
+            className="btn btn-outline-secondary" href={swaggerUrl} target="_blank" rel="noreferrer">
               Abrir /docs →
             </a>
           </div>
