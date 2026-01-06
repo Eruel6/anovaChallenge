@@ -20,8 +20,6 @@ O foco do projeto foi:
   - Com Docker (recomendado)
   - Local (sem Docker)
 - Fluxo de uso (UI)
-- Troubleshooting
-- Próximos passos
 
 ---
 
